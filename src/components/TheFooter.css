@@ -1,0 +1,30 @@
+footer {
+    text-align: center;
+    font-size: .7rem;
+    color: rgb(168, 168, 168);
+    padding: 1rem .5rem;
+}
+
+a {
+    margin-inline: .2rem;
+    font-weight: bold;
+    color: rgb(168, 168, 168);
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+svg {
+    width: 1rem;
+    height: 1rem;
+    fill: rgb(168, 168, 168);
+    margin-right: .2rem;
+}
+
+a:hover svg, a:hover path {
+    fill: black;
+    cursor: pointer;
+}

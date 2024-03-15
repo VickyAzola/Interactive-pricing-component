@@ -1,0 +1,52 @@
+header {
+    margin: 0 1rem;
+    min-height: 15rem;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: url('/images/pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header::before {
+    content: "";
+    background-color: hsl(230, 100%, 99%);
+    position: absolute;
+    min-width: 100vw;
+    height: 25rem;
+    border-bottom-left-radius: 10rem;
+    right: 0;
+    top: 0;
+    z-index:-1;
+}
+
+h1 {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+
+h2 {
+    color: hsl(225, 20%, 60%);
+    font-size: .9rem;
+    font-weight: normal;
+}
+
+@media screen and (min-width: 650px) {
+    br {
+        display: none;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
+    header {
+        min-height: 14rem;
+    }
+    header::before {
+        height: 22rem;
+    }
+}
