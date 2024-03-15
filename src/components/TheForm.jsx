@@ -1,8 +1,10 @@
-import { React, useState} from 'react';
+import { useState, useEffect} from 'react';
 import './TheForm.css'
 
 function TheForm() {
 
+    // State to listen to window width
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     const [state, setState] = useState({
         pageViews: "100K",
         prices: "16.00",
@@ -42,6 +44,19 @@ function TheForm() {
         })
         setState(orderedData)
     }
+
+    // listener for window width
+    useEffect(() => {
+        function watchWidth() {
+            setWindowWidth(window.innerWidth)
+        }
+
+        window.addEventListener("resize", watchWidth)
+
+        return function() {
+            window.removeEventListener("resize", watchWidth)
+        }
+    })
     
     return (
     <>
@@ -96,7 +111,11 @@ function TheForm() {
                     aria-label="Toggle to show Yearly pricing and hide monthly pricing" />
                 <span className="slider round"></span>
             </label>
-            <p>Yearly Billing <span className='discount'>-25%</span></p>
+            <p>Yearly Billing 
+                <span className='discount'>-25% 
+                {windowWidth > 649 ? <span> discount</span> : '' } 
+                </span>
+            </p>
         </div>
     </form>
     </>
