@@ -16,7 +16,7 @@ function App() {
       <TheHeader />
       <main>
         <TheForm />
-        <section className='bottom-section'>
+        <div className='bottom-section'>
           <ul>
             {list.map(item => 
               <li key={item.id}><img src='/images/icon-check.svg' alt=""/>{item.text}</li>
@@ -24,7 +24,7 @@ function App() {
             }
           </ul>
           <button>Start my trial</button>
-        </section>
+        </div>
       </main>
       <TheFooter />
     </>
