@@ -11,7 +11,7 @@ header {
 
 header::before {
     content: "";
-    background-color: #f1f4ff;
+    background-color: hsl(224, 65%, 95%);
     position: absolute;
     min-width: 100vw;
     height: 25rem;
